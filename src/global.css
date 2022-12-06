@@ -1,0 +1,54 @@
+/**
+ * WHAT IS THIS FILE?
+ *
+ * Globally applied styles. No matter which components are in the page or matching route,
+ * the styles in here will be applied to the Document, without any sort of CSS scoping.
+ *
+ */
+
+:root {
+  --color-background: white;
+
+  --color-font: rgb(13, 13, 26);
+
+  /*--------- font sizes ---------*/
+  --logo-size: 1.7rem;
+
+  /*-------- font family ---------*/
+  --font-oxanium: "Oxanium", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+body {
+  transition: background-color 0.3s;
+  background-color: var(--color-background);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 426px) {
+  :root {
+    --logo-size: 2rem;
+  }
+}
+
+/*--------------- Reusable Classes --------------*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  max-width: 1400px;
+}
+
+.dark-mode {
+  --color-background: rgb(13, 13, 26);
+  --color-font: white;
+}
