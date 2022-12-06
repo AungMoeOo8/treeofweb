@@ -6,8 +6,8 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 
-import globalStyles from "./global.css?inline";
-import fontStyles from "./font-family.css?inline";
+import globalStyles from "./css/global.css?inline";
+import fontStyles from "./css/font-family.css?inline";
 
 export default component$(() => {
   /**
