@@ -1,7 +1,10 @@
 header {
+  position: sticky;
+  top: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  transition: padding 0.3s;
+  backdrop-filter: blur(8px);
+  transition: padding var(--transition-duration);
 }
 
 .navbar {
@@ -11,12 +14,9 @@ header {
 }
 
 .logo {
-  /* font-family: var(--font-oxanium); */
   font-weight: 500;
   font-size: var(--logo-size);
   display: inline;
-
-  transition: font-size 0.3s;
 }
 
 .navlinks-group {
@@ -31,7 +31,8 @@ header {
   justify-content: space-evenly;
   align-items: center;
   background-color: var(--color-background);
-  transition: opacity 0.3s, background-color 0.3s;
+  transition: opacity var(--transition-duration),
+    background-color var(--transition-duration);
 }
 
 .color-mode-btn {
@@ -55,9 +56,6 @@ header {
 .navlink {
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--color-font);
-  /* font-family: var(--font-oxanium); */
-  transition: color 0.3s;
 }
 
 .navlink:hover {
@@ -75,7 +73,7 @@ header {
 
 .bg-logo {
   position: absolute;
-  width: 75px;
+  width: 60px;
   height: auto;
 }
 
@@ -110,6 +108,7 @@ header {
   filter: drop-shadow(0px 0px 20px rgb(132, 236, 83));
 }
 
+/*----------------- media queries --------------*/
 @media screen and (min-width: 426px) {
   header {
     padding-top: 30px;

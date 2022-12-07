@@ -78,13 +78,15 @@ export default component$(() => {
   const navlinksGroupRef = useSignal<HTMLElement>() as Signal<HTMLElement>;
   const colorMode = useSignal<string | null>() as Signal<string | null>;
 
-  const openNavlinksGroup$ = $(() =>
-    navlinksGroupRef.value.classList.add("navlinks-group-open")
-  );
+  const openNavlinksGroup$ = $(() => {
+    document.body.classList.add("overflow-hidden");
+    navlinksGroupRef.value.classList.add("navlinks-group-open");
+  });
 
-  const closeNavlinksGroup$ = $(() =>
-    navlinksGroupRef.value.classList.remove("navlinks-group-open")
-  );
+  const closeNavlinksGroup$ = $(() => {
+    document.body.classList.remove("overflow-hidden");
+    navlinksGroupRef.value.classList.remove("navlinks-group-open");
+  });
 
   const changeToDarkMode = $(() => {
     colorMode.value = "dark";
@@ -134,7 +136,7 @@ export default component$(() => {
           <Link href="/">
             <span class="navlink">Home</span>
           </Link>
-          <Link href="/">
+          <Link href="/blog">
             <span class="navlink">Blog</span>
           </Link>
           <Link href="/">

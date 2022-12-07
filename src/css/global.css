@@ -8,20 +8,28 @@
 
 :root {
   --color-background: white;
-
   --color-font: rgb(13, 13, 26);
+  --color-border: rgb(240, 213, 255);
 
   /*--------- font sizes ---------*/
   --logo-size: 1.7rem;
 
+  --hero-text-big-size: 2rem;
+  --hero-text-size: 1.5rem;
+
+  --info-font-size: 1.2rem;
+
   /*-------- font family ---------*/
   --font-oxanium: "Oxanium", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+  /*---------- duration -----------*/
+  --transition-duration: 0.5s;
 }
 
 body {
-  transition: background-color 0.3s;
   background-color: var(--color-background);
+  transition: background-color var(--transition-duration);
 }
 
 * {
@@ -33,12 +41,16 @@ a {
   text-decoration: none;
 }
 
+h1,
+h4,
 a,
 p,
 span,
 div {
   color: var(--color-font);
   font-family: var(--font-oxanium);
+  transition: color var(--transition-duration),
+    font-size var(--transition-duration);
 }
 
 ::selection {
@@ -46,9 +58,33 @@ div {
   color: white;
 }
 
+/*-------------- media queries -------------*/
 @media screen and (min-width: 426px) {
   :root {
     --logo-size: 2rem;
+
+    --hero-text-big-size: 2.5rem;
+
+    --info-font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  :root {
+    --info-font-size: 1.2rem;
+  }
+
+  body {
+    overflow-y: scroll !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  :root {
+    --hero-text-big-size: 3rem;
+    --hero-text-size: 2rem;
+
+    --info-font-size: 1.3rem;
   }
 }
 
@@ -72,10 +108,16 @@ div {
 .dark-mode {
   --color-background: rgb(13, 13, 26);
   --color-font: white;
+
+  --color-border: rgb(56, 31, 71);
 }
 
 .text-gradient {
   background: linear-gradient(90deg, rgb(255, 0, 255), rgb(57, 232, 255));
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

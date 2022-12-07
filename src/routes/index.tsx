@@ -23,6 +23,7 @@ export default component$(() => {
           {/* <div class="image-frame-vertical"></div>
           <div class="image-frame-horizontal"></div> */}
           <FallIsComing />
+          {/* <img src="/assets/images/fallIsComing.png" /> */}
         </div>
 
         <div class="hero-info">

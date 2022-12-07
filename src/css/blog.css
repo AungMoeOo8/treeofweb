@@ -1,0 +1,35 @@
+.blog {
+  display: flex;
+}
+
+.blog-text-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.blog-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.blog-list .article {
+  width: 100%;
+  padding: 20px;
+  border: solid 1px var(--color-border);
+  box-shadow: 0px 0px 10px var(--color-border);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  transition: border var(--transition-duration),
+    box-shadow var(--transition-duration);
+}
+
+.article-image {
+  align-self: center;
+  width: 50%;
+  height: auto;
+}
