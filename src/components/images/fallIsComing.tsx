@@ -5,6 +5,8 @@ export default () => (
     data-name="Layer 1"
     // width="1063.44683"
     // height="795.60107"
+    width="100%"
+    height="100%"
     viewBox="0 0 1063.44683 795.60107"
   >
     <defs>

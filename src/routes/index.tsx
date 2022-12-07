@@ -10,14 +10,34 @@ export default component$(() => {
     <div class="container-small">
       <div class="hero">
         <div class="hero-text-group">
-          <span class="hero-text big">Hello World</span>
+          <span class="hero-text big text-gradient">Knowledge</span>
           <span class="hero-text">The tree is just planted.</span>
-          <span class="hero-text">Will grow day by day, Hopefully.</span>
+          <span class="hero-text">
+            Will grow day by day,{" "}
+            <span class="text-gradient" style={{ fontWeight: 600 }}>
+              Hopefully.
+            </span>
+          </span>
         </div>
         <div class="hero-img">
           {/* <div class="image-frame-vertical"></div>
           <div class="image-frame-horizontal"></div> */}
           <FallIsComing />
+        </div>
+
+        <div class="hero-info">
+          <div class="info">
+            <span class="key">Follower</span>
+            <span class="value">10K</span>
+          </div>
+          <div class="info">
+            <span class="key">Roadmap</span>
+            <span class="value">5</span>
+          </div>
+          <div class="info">
+            <span class="key">Article</span>
+            <span class="value">12</span>
+          </div>
         </div>
       </div>
     </div>

@@ -11,13 +11,11 @@ header {
 }
 
 .logo {
-  font-family: var(--font-oxanium);
+  /* font-family: var(--font-oxanium); */
   font-weight: 500;
   font-size: var(--logo-size);
   display: inline;
-  background: linear-gradient(90deg, rgb(255, 0, 255), rgb(57, 232, 255));
-  -webkit-background-clip: text;
-  color: transparent;
+
   transition: font-size 0.3s;
 }
 
@@ -58,7 +56,7 @@ header {
   font-size: 1.1rem;
   font-weight: 500;
   color: var(--color-font);
-  font-family: var(--font-oxanium);
+  /* font-family: var(--font-oxanium); */
   transition: color 0.3s;
 }
 
