@@ -121,3 +121,11 @@ div {
 .overflow-hidden {
   overflow: hidden;
 }
+
+/* .thing-to-hover {
+  transition: fill 0.5s;
+}
+
+.thing-to-hover:hover {
+  fill: red;
+} */

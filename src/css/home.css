@@ -29,6 +29,7 @@
 }
 
 .hero-img {
+  justify-self: center;
   grid-area: image;
   position: relative;
   display: flex;
@@ -65,6 +66,9 @@
 }
 
 @media screen and (min-width: 426px) {
+  .hero-img {
+    max-width: 400px;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -82,7 +86,6 @@
 
   .hero-img {
     padding: 20px;
-    max-width: none;
   }
 
   .hero-info {
@@ -94,5 +97,9 @@
 @media screen and (min-width: 1025px) {
   .hero {
     margin: 75px 0;
+  }
+
+  .hero-img {
+    max-width: none;
   }
 }
