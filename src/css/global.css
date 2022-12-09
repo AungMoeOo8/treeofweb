@@ -17,7 +17,7 @@
   --hero-text-big-size: 2rem;
   --hero-text-size: 1.5rem;
 
-  --info-font-size: 1.2rem;
+  --info-font-size: 1.1rem;
 
   /*-------- font family ---------*/
   --font-oxanium: "Oxanium", sans-serif;
@@ -64,8 +64,6 @@ div {
     --logo-size: 2rem;
 
     --hero-text-big-size: 2.5rem;
-
-    --info-font-size: 1.3rem;
   }
 }
 
@@ -92,16 +90,16 @@ div {
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
+  padding-left: 12px;
+  padding-right: 12px;
   max-width: 1400px;
 }
 
-.container-small {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
+.container.big {
+  max-width: 1920px;
+}
+
+.container.small {
   max-width: 1200px;
 }
 

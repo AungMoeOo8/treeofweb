@@ -7,10 +7,15 @@ import styles from "../css/home.css?inline";
 export default component$(() => {
   useStylesScoped$(styles);
   return (
-    <div class="container-small">
+    <div class="container small">
       <div class="hero">
         <div class="hero-text-group">
-          <span class="hero-text big text-gradient">Knowledge</span>
+          <span
+            class="hero-text big text-gradient"
+            style={{ width: "min-content" }}
+          >
+            Knowledge
+          </span>
           <span class="hero-text">The tree is just planted.</span>
           <span class="hero-text">
             Will grow day by day,{" "}

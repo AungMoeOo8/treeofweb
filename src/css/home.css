@@ -42,12 +42,12 @@
 
 .hero-info {
   grid-area: info;
-  display: inline-flex;
+  display: flex;
   justify-content: space-around;
 }
 
 .info {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
@@ -66,8 +66,20 @@
 }
 
 @media screen and (min-width: 426px) {
+  .hero {
+    grid-template-areas:
+      "text text"
+      "image info";
+  }
+
   .hero-img {
-    max-width: 400px;
+    /* max-width: 400px; */
+  }
+
+  .hero-info {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 8px;
   }
 }
 
@@ -89,6 +101,7 @@
   }
 
   .hero-info {
+    flex-direction: row;
     justify-content: start;
     column-gap: 15%;
   }

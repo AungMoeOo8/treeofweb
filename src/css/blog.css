@@ -1,5 +1,6 @@
 .blog {
   display: flex;
+  flex-direction: column;
 }
 
 .blog-text-group {
@@ -11,8 +12,8 @@
 .blog-list {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  grid-template-columns: 1fr;
+  gap: 5px;
 }
 
 .blog-list .article {
@@ -32,4 +33,32 @@
   align-self: center;
   width: 50%;
   height: auto;
+}
+
+.article-title {
+  font-size: 0.9rem;
+}
+
+/*-------------- media queries -------------*/
+@media screen and (min-width: 426px) {
+  .blog-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .blog {
+    flex-direction: row;
+  }
+
+  .blog-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .blog-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

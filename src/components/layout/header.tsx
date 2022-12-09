@@ -6,7 +6,7 @@ import {
   useSignal,
   useStylesScoped$,
 } from "@builder.io/qwik";
-import { Link } from "@builder.io/qwik-city";
+import { Link, useLocation } from "@builder.io/qwik-city";
 import styles from "../../css/header.css?inline";
 
 export const SunIcon = () => (
@@ -75,6 +75,8 @@ export const CloseButton = () => (
 export default component$(() => {
   useStylesScoped$(styles);
 
+  const { pathname } = useLocation();
+
   const navlinksGroupRef = useSignal<HTMLElement>() as Signal<HTMLElement>;
   const colorMode = useSignal<string | null>() as Signal<string | null>;
 
@@ -121,7 +123,7 @@ export default component$(() => {
 
   return (
     <header>
-      <div class="navbar container">
+      <div class={`navbar container ${pathname === "/blog/" ? "big" : ""}`}>
         <Link href="/">
           <span class="logo">TreeOfWeb</span>
         </Link>
